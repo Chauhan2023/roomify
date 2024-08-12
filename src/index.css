@@ -1,0 +1,359 @@
+/* Move this to the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Tenor+Sans&display=swap');
+/* Your CSS rules come after the @import */
+:root {
+  --primary-color: #36b4e7;
+  --primary-dark-color: #217FB5;
+  --primary-hover-color: #1c95c4;
+  --h1-font-size: clamp(2rem, calc(1.5rem + 1vw), 3rem);
+  --h2-font-size: clamp(1.75rem, calc(1.25rem + 1vw), 2.5rem);
+  --h3-font-size: clamp(1.5rem, calc(1.125rem + 0.75vw), 2rem);
+  --h4-font-size: clamp(1.25rem, calc(1rem + 0.5vw), 1.75rem);
+  --h5-font-size: clamp(1rem, calc(0.875rem + 0.5vw), 1.5rem);
+  --h6-font-size: clamp(0.875rem, calc(0.75rem + 0.25vw), 1.25rem);
+  --body-font-size: clamp(0.875rem, calc(0.75rem + 0.25vw), 1.125rem);
+  --small-font-size: clamp(0.75rem, calc(0.625rem + 0.2vw), 1rem);
+}
+
+body {
+  font-family: "Tenor Sans" !important;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* The rest of your CSS rules follow */
+.btn-primary {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border: 0px !important;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover-color) !important;
+  color: white !important;
+  border: 0px !important;
+}
+
+.btn-outline-primary {
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-hover-color) !important;
+  color: white !important;
+  border: 2px solid var(--primary-hover-color) !important;
+}
+
+
+
+/* -------form-control----- */
+
+
+
+/* -----form-control-end------- */
+
+/* Hide default pagination */
+.swiper-pagination {
+  display: none;
+}
+
+/* Style the navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;
+  color: gray;
+
+}
+
+/* Style the buttons inside Swiper slides */
+.swiper-button {
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  margin: 5px;
+  height: 30px !important;
+  width: 30px !important;
+}
+
+/* Position the navigation buttons inside the Swiper */
+.swiper-button-prev {
+  left: -15px; /* Adjust positioning as needed */
+}
+
+.swiper-button-next {
+  right: -15px; /* Adjust positioning as needed */
+}
+
+
+
+/* Add this CSS to your main CSS file or use a style tag */
+.line-behind-circle {
+  position: relative;
+}
+
+.line-behind-circle::before {
+  content: "";
+  width: 80%;
+  left: 50%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: -10%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+.shared-section-detail {
+  font-size: var(--h6-font-size);
+}
+
+/* Initial styles for the navbar */
+.navbar-hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-show {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.small-font {
+  font-size: var(--small-font-size);
+}
+.blog-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(.8);
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 15px;
+  color: white;
+
+ 
+  text-align: center;
+}
+
+.blog-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.blog-description {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+
+.block-newsletter {
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bg-custome-newsletter-color{
+  background-color: var(--primary-color);
+}
+
+.footer__social-link>svg{
+  fill: gray;
+}
+
+.menu-link {
+  display: inline-block;
+  position: relative;
+  padding: 0.2em 0;
+  color: black;
+  line-height: 1.5em;
+}
+
+
+.menu-link_us-s:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
+  background-color: currentColor;
+}
+
+.menu-link_us-s:hover:after,
+.menu-link_us-s.menu-link_active:after {
+  width: 2em;
+}
+
+
+.verified {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 6px 0px 12px;
+  background-color: #36B4E770;
+  border-radius: 0px 10px 0px 40px;
+}
+
+
+.image-card {
+  position: relative;
+  display: block;
+  height: 280px;
+  background-color: var(--your-light-dark-color);
+  border-radius: var(--your-border-radius);
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: var(--your-box-shadow);
+}
+
+.image-card-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-card:hover .image-card-background {
+  transform: scale(1.03);
+}
+
+.image-card-overlay {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 90%);
+}
+
+.image-card-content {
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  z-index: 1;
+  padding: 16px;
+}
+
+.image-card-title {
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.image-card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.image-card-author {
+  color: var(--your-dark-color);
+  font-size: 14px;
+}
+
+.image-card-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.image-card-stat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--your-dark-color);
+}
+
+.image-card-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+
+
+.image-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensures the pseudo-elements don’t overflow */
+}
+
+.image-swiper img {
+  display: block; /* Removes bottom space */
+  width: 100%; /* Ensures image takes full width */
+  height: 100%; /* Ensures image takes full height */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.image-swiper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)); /* Darker gradient */
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 1; /* Ensure it appears above the image */
+}
+
+/* Optional: more pronounced shadow effect */
+.image-swiper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .8); /* Darker shadow */
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 0; /* Ensure it appears behind the gradient */
+}
