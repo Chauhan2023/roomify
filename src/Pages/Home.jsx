@@ -51,9 +51,9 @@ function Home() {
     <Swiperbanner/>
     <div className='my-4 my-md-3 my-2'></div>
 
-    <div className='row p-3 d-flex justify-content-center py-5 '>
+    <div className='row p-lg-3  d-flex justify-content-center py-5 '>
 
-    <div className='col-9 '><SearchRoom title="Flatmate" content={accordionContent} /></div>
+    <div className='col-lg-9 col-12'><SearchRoom title="Flatmate" content={accordionContent} /></div>
    
       
     </div>
@@ -119,16 +119,24 @@ function Home() {
     </div>
 
 
-    <div  className='blog py-3'>
-    <h2 className='text-center py-3'>Our Blogs</h2>
-    <div className='row p-2' >
-
-    <div className='col-3'><BlogSection/></div>
-    <div className='col-3'><BlogSection/></div>
-    <div className='col-3'><BlogSection/></div>
-    <div className='col-3 '><BlogSection/></div>
-    </div>
-
+    <div className='blog py-3'>
+      <h2 className='text-center py-3'>Our Blogs</h2>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+            <BlogSection />
+          </div>
+          <div className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+            <BlogSection />
+          </div>
+          <div className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+            <BlogSection />
+          </div>
+          <div className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+            <BlogSection />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div>

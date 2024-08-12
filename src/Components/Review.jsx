@@ -18,8 +18,7 @@ import {
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
-
-// Import required modules
+import { Autoplay } from "swiper/modules"; // Import necessary modules
 import { Navigation, Pagination } from "swiper/modules";
 
 const Review = () => {
@@ -89,7 +88,11 @@ const Review = () => {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
+
+        autoplay={{ delay: 2000, disableOnInteraction: false }} // Auto-play configuration
+        modules={[Autoplay]} // Include necessary modules
         pagination={{ clickable: true, el: null }} // Hide pagination
+        modules={[Navigation, Pagination]}
         breakpoints={{
           320: {
             slidesPerView: 1,

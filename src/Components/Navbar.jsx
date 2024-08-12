@@ -58,7 +58,7 @@ const CustomNavbar = () => {
      </NavbarBrand>
 
      {/* Centered Buttons */}
-     <div className="mx-auto d-flex gap-3">
+     <div className="mx-auto d-flex gap-3 d-none d-lg-block">
        <NavItem className="list-unstyled rounded-pill text-white btn btn-primary " color="primary">
          <NavLink tag={Link} to="/find_flat" className="btn btn-primary">
            Find a Room

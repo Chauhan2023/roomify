@@ -18,6 +18,14 @@
   --small-font-size: clamp(0.75rem, calc(0.625rem + 0.2vw), 1rem);
 }
 
+.fw-body{
+  font-size: var(--body-font-size);
+}
+
+.fw-small{
+  font-size: var(--small-font-size);
+}
+
 body {
   font-family: "Poppins" !important;
   font-weight: 300;
@@ -360,3 +368,92 @@ body {
   pointer-events: none; /* Allows clicks to pass through */
   z-index: 0; /* Ensure it appears behind the gradient */
 }
+
+
+.carousel-control-next, .carousel-control-prev{
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: .2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-dark-color);
+}
+
+.carousel-control-next-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+}
+.carousel-control-prev-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.swiper-button-prev, .swiper-button-next{
+  height: 25px !important;
+  width: 25px !important;
+  
+}
+
+
+/* Default is vertical orientation */
+.tab-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* On medium and large screens, switch to row orientation */
+@media (min-width: 768px) {
+  .tab-container {
+    flex-direction: row !important;
+  }
+
+  .tab-list {
+    width: 25%; /* Tab list on the left */
+  }
+
+  .tab-panels {
+    width: 75%; /* Panels on the right */
+  }
+}
+
+/* On small screens, keep it column-oriented */
+@media (max-width: 767px) {
+  .tab-list, .tab-panels {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+
+
+/* Reset the display to flex to allow responsiveness */
+.css-1xpribl {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* On medium screens and above, change flex direction to row */
+@media (min-width: 768px) {
+  .css-1xpribl {
+    flex-direction: row;
+  }
+}
+
+
+
+.card-cities-width{
+  width: 15rem;
+}
+
+
+@media (max-width: 767px) {
+  .card-cities-width {
+    width: 20rem; /* Full width on small screens */
+  }
+}
+
+
+
+/* Reset the display to flex to allow responsiveness */
+
+

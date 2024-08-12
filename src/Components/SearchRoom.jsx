@@ -26,7 +26,7 @@ const SearchRoom = ({ content }) => {
 
   return (
     <div className="d-flex justify-content-center">
-      <Accordion allowToggle className="border-1 col-8">
+      <Accordion allowToggle className="border-1 col-lg-8 col-11">
         <AccordionItem className="border-0">
           {({ isExpanded }) => (
             <>
