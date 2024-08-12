@@ -148,7 +148,7 @@ function Footer() {
   
               <div className="d-flex flex-column">
                 <h5 className="text-center text-dark">Email</h5>
-                <p className="text-center text-dark">probey@gmail.com</p>
+                <p className="text-center text-dark">roomiefy@gmail.com</p>
               </div>
               <div className="d-flex flex-column">
                 <h5 className="text-center text-dark">Phone</h5>

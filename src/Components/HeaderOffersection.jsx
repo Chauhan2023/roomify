@@ -19,8 +19,8 @@ const HeaderOffersection = () => {
   return (
     <div style={{ backgroundColor: 'var(--primary-dark-color)', padding: ' 0' }}>
       <Container>
-        <Row className="justify-content-center">
-          <Col md={6} sm={12}>
+        <Row className="justify-content-center fw-light" style={{fontSize:"var(--small-font-size)"}}>
+          <Col md={6} sm={12} >
             <Swiper
               modules={[Autoplay, Navigation]}
               spaceBetween={10}

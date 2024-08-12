@@ -21,11 +21,12 @@ import Typewriter from "typewriter-effect";
 
 const SearchRoom = ({ content }) => {
   const [selectedAge, setSelectedAge] = useState(18);
-  const [showAdvanced, setShowAdvanced] = useState(false); // Add state for showing advanced options
+  const [selectedRent, setSelectedRent] = useState(3000); // State for rent
+  const [showAdvanced, setShowAdvanced] = useState(false);
 
   return (
     <div className="d-flex justify-content-center">
-      <Accordion allowToggle className="border-1 col-10">
+      <Accordion allowToggle className="border-1 col-8">
         <AccordionItem className="border-0">
           {({ isExpanded }) => (
             <>
@@ -67,10 +68,7 @@ const SearchRoom = ({ content }) => {
 
                   <div className="d-flex justify-content-between gap-3 align-items-center mb-3">
                     <span className="text-nowrap">Show me</span>
-                    <select
-                      className="form-control"
-                      style={{ width: "300px" }}
-                    >
+                    <select className="form-control" style={{ width: "300px" }}>
                       {content[1]?.types?.map((data, index) => (
                         <option key={index} value={data}>
                           {data}
@@ -108,10 +106,7 @@ const SearchRoom = ({ content }) => {
 
                   <div className="d-flex justify-content-between gap-3 align-items-center mt-4">
                     <span className="text-nowrap">Living as</span>
-                    <select
-                      className="form-control"
-                      style={{ width: "300px" }}
-                    >
+                    <select className="form-control" style={{ width: "300px" }}>
                       {content[4]?.buttons?.map((data, index) => (
                         <option key={index} value={data}>
                           {data}
@@ -122,10 +117,7 @@ const SearchRoom = ({ content }) => {
 
                   <div className="d-flex justify-content-between gap-3 align-items-center mt-3">
                     <span className="text-nowrap">Status</span>
-                    <select
-                      className="form-control"
-                      style={{ width: "300px" }}
-                    >
+                    <select className="form-control" style={{ width: "300px" }}>
                       {content[5]?.buttons?.map((data, index) => (
                         <option key={index} value={data}>
                           {data}
@@ -134,27 +126,79 @@ const SearchRoom = ({ content }) => {
                     </select>
                   </div>
 
+                  {/* Rent Slider */}
+                  <div className="d-flex justify-content-between align-items-center mt-3 mb-3">
+                    <span className="text-nowrap">Rent</span>
+                    <Slider
+                      defaultValue={3000}
+                      min={3000}
+                      max={30000}
+                      step={500}
+                      aria-label="rent-slider"
+                      colorScheme="blue"
+                      width="300px"
+                      onChange={(value) => setSelectedRent(value)}
+                    >
+                      <SliderMark value={3000} mt="1" ml="-2.5" fontSize="sm">
+                        3000
+                      </SliderMark>
+                      <SliderMark value={30000} mt="1"  fontSize="sm" style={{marginLeft:"-2rem"}}>
+                        30000
+                      </SliderMark>
+                      <SliderTrack>
+                        <SliderFilledTrack />
+                      </SliderTrack>
+                      <Tooltip label={selectedRent} placement="top">
+                        <SliderThumb />
+                      </Tooltip>
+                    </Slider>
+                  </div>
+
                   <div className="d-flex justify-content-between gap-3 align-items-center py-2">
                     <span className="text-nowrap">Advance Search</span>
                     <Switch
-                      size='md'
+                      size="md"
                       isChecked={showAdvanced}
                       onChange={() => setShowAdvanced(!showAdvanced)}
                     />
                   </div>
 
-                  <div className={`col-12 p-2 border-dashed border-1 advance options ${showAdvanced ? 'd-block' : 'd-none'}`}>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">No smoking</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">TV</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">Fridge</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">Washing machine</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">Microwave</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">Vegetarian</button>
-                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">Non-vegetarian</button>
+                  <div
+                    className={`col-12 p-2 border-dashed border-1 advance options ${
+                      showAdvanced ? "d-block" : "d-none"
+                    }`}
+                  >
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      No smoking
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      TV
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      Fridge
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      Washing machine
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      Microwave
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      Vegetarian
+                    </button>
+                    <button className="btn btn-sm btn-outline-primary mx-2 mb-2">
+                      Non-vegetarian
+                    </button>
                   </div>
 
                   <div className="text-center mt-4">
-                    <Button colorScheme="blue">Search  &nbsp; <span className="text-white"> <LiaSearchSolid /></span></Button>
+                    <Button colorScheme="blue">
+                      Search &nbsp;{" "}
+                      <span className="text-white">
+                        {" "}
+                        <LiaSearchSolid />
+                      </span>
+                    </Button>
                   </div>
                 </div>
               </AccordionPanel>

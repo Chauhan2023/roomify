@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Tenor+Sans&display=swap');
 /* Your CSS rules come after the @import */
 :root {
-  --primary-color: #36b4e7;
-  --primary-dark-color: #217FB5;
-  --primary-hover-color: #1c95c4;
+  --primary-color: #2196f3;        /* Bright Blue */
+  --primary-dark-color: #1976d2;   /* Darker Blue */
+  --primary-hover-color: #64b5f6;  /* Lighter Blue */
+  
+  
+  
   --h1-font-size: clamp(2rem, calc(1.5rem + 1vw), 3rem);
   --h2-font-size: clamp(1.75rem, calc(1.25rem + 1vw), 2.5rem);
   --h3-font-size: clamp(1.5rem, calc(1.125rem + 0.75vw), 2rem);
@@ -16,8 +19,8 @@
 }
 
 body {
-  font-family: "Tenor Sans" !important;
-  font-weight: 200;
+  font-family: "Poppins" !important;
+  font-weight: 300;
   font-style: normal;
 }
 

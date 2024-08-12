@@ -13,7 +13,7 @@ function HeaderMarquee() {
 
   return (
     <div>
-      <Marquee className="h-fit">
+      <Marquee className="h-fit" style={{fontSize:"var(  --body-font-size)"}}>
         {content.map((data, index) => (
           <span key={index} style={{ marginRight: '20px' }}>
             {data}

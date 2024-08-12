@@ -86,7 +86,7 @@ export default () => {
         >
           <div style={{ flex: "1 1 40%" }} className="border-end">
             <InputGroup className="rounded-0">
-              <InputLeftAddon className="rounded-0">
+              <InputLeftAddon className="rounded-0" style={{color:"var(--primary-dark-color)"}}>
                 <FaLocationDot />
               </InputLeftAddon>
               <select
@@ -112,7 +112,7 @@ export default () => {
           </div>
           <div style={{ flex: "1 1 60%" }}>
             <InputGroup className="rounded-0">
-              <InputLeftAddon className="rounded-0">
+              <InputLeftAddon className="rounded-0"  style={{color:"var(--primary-dark-color)"}}>
                 <LiaSearchSolid />
               </InputLeftAddon>
               <Input

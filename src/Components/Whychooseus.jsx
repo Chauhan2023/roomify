@@ -1,11 +1,18 @@
 import React from 'react';
 
+import icon1 from "../assets/icons/1.png";
+import icon2 from "../assets/icons/2.png";
+import icon3 from "../assets/icons/3.png";
+import icon4 from "../assets/icons/4.png";
+import icon5 from "../assets/icons/4.png";
+
+
 const cardData = [
-  { image: 'https://www.interiorcompany.com/assets/images/madeOrder.svg', title: 'Virtual Visit', text: 'Explore our offerings virtually.' },
-  { image: 'https://www.interiorcompany.com/assets/images/lowestPrice.svg', title: 'Safety', text: 'Your safety is our top priority.' },
-  { image: 'https://www.interiorcompany.com/assets/images/qualityChecks.svg', title: 'Versatile People', text: 'Our team adapts to your needs.' },
-  { image: 'https://www.interiorcompany.com/assets/images/timelyDelivery.svg', title: 'Price Match Guarantee', text: 'We match any competitor’s price.' },
-  { image: 'https://www.interiorcompany.com/assets/images/10yearWarranty.svg', title: 'Flexible Accommodation', text: 'Our accommodations are flexible.' },
+  { image: icon1, title: 'Virtual Visit', text: 'Explore our offerings virtually.' },
+  { image: icon2, title: 'Safety', text: 'Your safety is our top priority.' },
+  { image: icon3, title: 'Versatile People', text: 'Our team adapts to your needs.' },
+  { image: icon4, title: 'Price Match Guarantee', text: 'We match any competitor’s price.' },
+  { image: icon5, title: 'Flexible Accommodation', text: 'Our accommodations are flexible.' },
   // Add more cards as needed
 ];
 
